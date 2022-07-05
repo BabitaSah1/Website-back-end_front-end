@@ -6,6 +6,7 @@ var createToken=(data)=>{
     console.log(token);//
     return token
 }
+
 var verifyToken=(req,res,next)=>{
     // console.log(req.headers)
    var token=req.headers.cookie
@@ -18,7 +19,7 @@ var verifyToken=(req,res,next)=>{
         res.send("invalid token")
        }
        else{
-        req.body.meta=verify
+        req.body.meta=verify//verify ho gya yha
         next()
        }
    }
