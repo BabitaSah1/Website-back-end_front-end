@@ -1,6 +1,6 @@
 module.exports={
     getHome:(req,res,next)=>{
-        res.send("<h1>Welcome to post Home page </h1>")
+        res.render("homePage.hbs")
     },
     // postHome:(req,res,next)=>{
     //     res.send("")

@@ -22,13 +22,13 @@ module.exports={
                         res.cookie("token",token).status(200).redirect("/home")
                     }
                     else{
-                        res.status(404).send("password is not matching")
+                        res.status(404).send("<h1> password is not matching </h1>")
                     }
                     // console.log(data);
                     // res.send("you are loggedin")
                 }
                 else{
-                    res.send("you are not registered")
+                    res.send("<h1> you are not registered</h1>")
                 }
         }
         catch(err){

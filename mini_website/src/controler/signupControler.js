@@ -14,21 +14,21 @@ module.exports={
                 let emaildata=await user.findOne({email})
                 console.log({emaildata});
                 if(emaildata){
-                    res.send("already registered")
+                    res.send("<h1>already registered </h1>")
                 }
                 else{
                     if(userData){
                         let data=await user.create(req.body.data)
                         console.log(data);
                         if(data){
-                            res.status(200).send("successfully submitted")
+                            res.status(200).send("<h1> successfully submitted </h1>")
                         }
                         else{
-                            res.status(404).send("something went wrong")
+                            res.status(404).send("<h1> something went wrong </h1>")
                         }
                     }
                    else{
-                    res.status(404).send("something went wrong")
+                    res.status(404).send("<h1>something went wrong</h1>")
                    }
                     
                 }

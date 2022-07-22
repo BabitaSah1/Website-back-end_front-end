@@ -1,6 +1,6 @@
 const path=require("path")
 const express=require("express")
-const {connect}=require("./database/databaseConfig")
+const {connect,disconnect}=require("./database/databaseConfig")
 connect()
 
 const app=express()
